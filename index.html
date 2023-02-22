@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/émoticônes - émojis [Kolobanga].png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+
+        <div id="card">
+
+<div id="card-inner"> 
+
+    <div id="front">
+        <div id="shareHolder">
+            <img src="images/mastercard.png" alt="card-type" width="50" height = "auto" id="userCardType" >
+        </div>
+
+        <div id="cardNumber"> 
+            <span id="first"> </span>
+            <span  id="second"></span>
+            <span  id="third"></span>
+            <span  id="fourth">  </span>
+        </div>
+
+        <div id="cardInfo"> 
+            <h5 id ="label-name"> Surname M.Name </h5>
+            <img src="images/verified.png" id="card-type" alt="cards" width="100">  
+            <h4 id="userDate"></h4>
+        </div>
+
+   
+
+       
+    </div>
+
+    <div id="back">
+<div id="blackCont"> 
+
+</div>
+<p id="cvv-input"> 
+   
+</p>
+
+<p id="card-message"> This card is issued by National Open bank of nigeria,<br> Please do not share your information with others </p>
+<p id="guarantee"> Central Bank of Nigeria</p>
+    </div>
+
+</div>
+            
+
+        </div>
+        
+
+
+
+
+
+
+        <div id="form">
+
+            <form action="" id="fillForm">
+                <div id="cardNum">
+                    <label for="cardInput"> CARD NUMBER </label>
+
+                    <div id="no-input">
+                        <input type="text" id="cardInput" maxlength="4">
+                        <input type="text" id="cardInput" maxlength="4">
+                        <input type="text" id="cardInput" maxlength="4">
+                        <input type="text" id="cardInput" maxlength="4">
+                    </div>
+                    <p id="error"> This is not a valid card number </p>
+                  
+                </div>       
+                 <div id="accountName">
+                    <label for="cardInput"> CARD NAME </label>
+               <input type="text" name="text" id="UserName" onkeyup="changeName()">
+             
+                 </div>        
+
+                 <div id="select">
+                    <label for = "userName"> EXP.DATE(MM/YY) </label> 
+      <input type="date" name="" id="date"  required>
+      <p id="error"> This is not a valid date format </p>
+                 </div>
+
+                 <div id="CVV-cont">
+                    <label for="CVV">CVV</label>
+                    <input type="text" name="text" id="CVV" maxlength="3">
+                 </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="app.js"> </script>
+</body>
+</html>

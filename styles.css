@@ -1,0 +1,214 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: Montserrat-VariableFont_wght;
+    background-image: url("images/bg-main-mobile.png");
+    background-size: cover;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Montserrat-VariableFont_wght ;
+    src: url("font/Montserrat-VariableFont_wght.ttf");
+}
+#container{ 
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card{
+    width: 300px;
+    height: 180px;
+    border: none;
+    border-radius: 12px;
+    background-image: url(images/bg-card-front.png);
+    z-index: 10;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+}
+
+#card-inner {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   transition: transform 500ms;
+   transform-style: preserve-3d;
+}
+#front{
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   padding: 12px;
+}
+#front,#back{
+  backface-visibility: hidden;
+}
+#cardInfo {
+    display: flex;
+    justify-content: space-between;
+
+}
+#cardNumber{
+    font-size: 1.7rem;
+    margin-bottom: 1.8rem;
+    margin-top: 15px;
+}
+
+#back{
+   width: 100%;
+   height: 100%;
+   font-size: 20px;
+   text-align: center;
+   color: white;
+   transform: rotateY(180deg);
+   position: absolute;
+   background-color: rgb(230, 230, 230);
+   border-radius: 10px;
+}
+
+ #card:hover #card-inner{
+   transform: rotateY(180deg);
+}
+
+#blackCont {
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    margin-top: 16px;
+}
+#cvv-input{
+    width: 92%;
+    margin: 12px;
+    border-radius: 8px;
+    background-color: rgb(148, 145, 145);
+    padding: 8px;
+    margin-top: 16px;
+    text-align: right;
+    font-size: 14px;
+}
+#card-message{
+    font-size: 8px;
+    color: black;
+    text-align: center;
+}
+#guarantee{
+    margin-top: 20px;
+    font-size: 6px;
+    color: black;
+    text-align: center;
+}
+#error {
+    color: red;
+    display: none;
+    font-size: 12px;
+}
+#fillForm{
+    border-radius: 20px;
+    width: 300px;
+    height: 430px;
+    border: none;
+    background-image: linear-gradient(to right , rgb(136, 3, 114),rgb(0, 156, 143));
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.3);
+    z-index: 0;
+    border-radius: 15px;
+    padding: 12px;
+    margin-top: -3rem;
+}
+#cardInput{
+    width: 20%;
+    padding: 12px;
+    background-color: white;
+    border: none;
+    box-shadow: inset 4px 4px 8px 0px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    margin:5px;
+}
+#cardNum {
+margin-top: 19%;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+}
+#no-input{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#UserName, #CVV, #date {
+    width: 100%;
+    border: 1.5px solid rgb(1, 42, 88);
+    border-radius: 10px;
+    padding: 12px;
+    border: none;
+    box-shadow: inset 4px 4px 8px 0px rgba(0,0,0,0.3);
+}
+#accountName{
+    margin-bottom: 10px;
+}
+#myselect{
+    border: 1.5px solid rgb(1, 42, 88);
+    border-radius: 10px;
+    padding: 12px;
+    width: 45%;
+    box-shadow: inset 4px 4px 8px 0px rgba(0,0,0,0.3);
+    border:  none;
+}
+option {
+    height: 20%;
+}
+    #select{
+width: 100%;
+margin-bottom: 10px;
+    }
+    @media  screen and (min-width: 900px) {
+        #container{ 
+            width: 850px;
+            flex-flow: row;
+            justify-content: space-around;
+          padding: 20px;
+        }
+
+        #card{
+            width: 45%;
+            height: 220px;
+            background-size: cover;
+      
+                } 
+                
+                #fillForm{
+                    border-radius: 20px;
+                    width: 400px;
+                    height: auto;
+                    margin-top: 0;
+                }
+                #cardInput{
+                    width: 22%;
+                    margin:5px;
+                }
+
+                #cardNumber{
+                    font-size: 1.8rem;
+                    margin-bottom: 3rem;
+                    margin-top:20px;
+                }
+                #card-message{
+                    margin-top: 2rem;
+                    font-size: 10px;
+                }
+    }
